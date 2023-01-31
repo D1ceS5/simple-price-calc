@@ -1,0 +1,222 @@
+.calculator-cont {
+    display: flex;
+    flex-direction: column;
+    min-width: 320px;
+    border: 1px solid #151515;
+    border-radius: 10px;
+    -webkit-box-shadow: 4px 4px 18px -6px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 4px 4px 18px -6px rgba(0, 0, 0, 0.75);
+    box-shadow: 4px 4px 18px -6px rgba(0, 0, 0, 0.75);
+   
+}
+
+.graphics-cont {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.graphics {
+   
+    margin: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.company {
+    border-bottom: 1px solid #151515;
+    margin: 10px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.company-price {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    width: 65%;
+}
+
+.price {
+    background: -webkit-gradient(linear, left bottom, left top, from(#dddddd), to(#7c7eff));
+    background: -webkit-linear-gradient(bottom, #dddddd, #7c7eff);
+    background: -o-linear-gradient(bottom, #dddddd 0, #7c7eff 100%);
+    background: linear-gradient(90deg, #dddddd, #7c7eff);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#abb7b8", endColorstr="#ffe7b4", GradientType=1);
+}
+
+.min {
+    background: -webkit-gradient(linear, left bottom, left top, from(#ff00aa), to(#ff48e0));
+    background: -webkit-linear-gradient(bottom, #ff00aa, #ff48e0);
+    background: -o-linear-gradient(bottom, #ff00aa 0, #ff48e0 100%);
+    background: linear-gradient(90deg, #ff00aa, #ff48e0);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#abb7b8", endColorstr="#ffe7b4", GradientType=1);
+}
+
+.company-header {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.company img {
+    width: 50px;
+    height: 50px;
+}
+
+.company-header span {
+    padding: 5px;
+    font-weight: bold;
+}
+
+.company-checks {
+    display: flex;
+    flex-direction: row;
+}
+
+.inputs-cont {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.slider-header {
+    font-size: 22px;
+    padding: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+.slider-cont {
+    padding: 15px;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    align-items: center;
+    min-height: 40px;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    background: rgb(145, 153, 252);
+    outline: none;
+    padding: 0;
+    margin: auto;
+    cursor: pointer;
+
+}
+
+.slider:before,
+.slider:after {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.slider:before {
+    content: attr(min);
+}
+
+.slider:after {
+    content: attr(max);
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    width: 25px;
+    height: 25px;
+    -webkit-appearance: none;
+    border: 2px solid white;
+    border-radius: 50%;
+    background: rgb(18, 18, 255);
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+}
+
+.slider::-webkit-slider-thumb:hover {
+    background: rgb(60, 60, 252);
+    transform: scale(1.2);
+}
+
+.slider::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    border: 0;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+}
+
+@media (max-width: 1000px) {
+    .calculator-cont{
+        flex-direction: column-reverse;
+    }
+    .slider-cont {
+        width: 100%;
+    }
+
+    .graphics {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .company {
+        min-height: 400px;
+        width: 20%;
+        display: flex;
+        flex-direction: column-reverse;
+        border: 0;
+    }
+
+    .company-header {
+        min-height: 200px;
+        border: 0;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        width: 100%;
+    }
+
+    .head-wrapper {
+        width: 100%;
+        text-align: center;
+    }
+
+    .company-checks {
+        flex-direction: column;
+    }
+
+    .company-price {
+        flex-direction: column-reverse;
+        align-items: center;
+        width: 100%;
+    }
+
+    .radio {
+        padding: 5px;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+}
